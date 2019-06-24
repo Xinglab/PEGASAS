@@ -4,7 +4,8 @@ Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 ### Ouick guide
 1. [Download](#downdload-the-pegasas-and-example-datasets)
 2. [Dependencies](#Dependencies)
-3. [Running PEGASAS](#performing-pegasas-analysis)
+3. [Usage](#performing-pegasas-analysis)
+4. [Contact](#contact)
 
 ### Downdload the PEGASAS and example datasets
 Go to the directory you want to download the pipeline, then clone as below:
@@ -83,3 +84,14 @@ optional arguments:
                         analysis.
   --GO-path             directory of GO analysis scripts.
 ```
+
+
+### Contact
+
+Yang Pan <panyang@ucla.edu>
+Yi Xing <yxing@ucla.edu>
+
+### Citation
+Manuscript in submission. 
+
+Authors: John W. Phillips, Yang Pan ... Douglas L. Black, Owen N. Witte, Yi Xing 
