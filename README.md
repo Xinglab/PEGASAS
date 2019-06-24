@@ -1,5 +1,5 @@
 # PEGASAS
-Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
+#### Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 
 ### Ouick guide
 1. [Download](#downdload-the-pegasas-and-example-datasets)
