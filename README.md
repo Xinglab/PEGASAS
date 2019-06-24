@@ -6,6 +6,7 @@ Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 2. [Dependencies](#Dependencies)
 3. [Usage](#performing-pegasas-analysis)
 4. [Contact](#contact)
+5. [Publication](#citation)
 
 ### Downdload the PEGASAS and example datasets
 Go to the directory you want to download the pipeline, then clone as below:
