@@ -8,13 +8,14 @@ Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 4. [Contact](#contact)
 5. [Publication](#citation)
 
-### Downdload the PEGASAS and example datasets
+### Downloading the PEGASAS and example datasets
 Go to the directory you want to download the pipeline, then clone as below:
 ```bash
 git clone git@github.com:Xinglab/PEGASAS.git
 ```
 ### Dependencies 
 python version 2.7
+
 R version 3.4.0
 
 ### Performing PEGASAS analysis
