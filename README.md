@@ -47,7 +47,7 @@ optional arguments:
                         time.
   --plotting            Making plots to inspect K-S enrichment scores.
   ```
- You can find the [eaxample](https://github.com/Xinglab/PEGASAS/example) file for Group Info and 50 Hallmarks in the [dataset](https://github.com/Xinglab/PEGASAS/PathwayActivity/dataset) from the Github repo. 
+ You can find the [eaxample](https://github.com/Xinglab/PEGASAS/tree/master/example) file for Group Info and 50 Hallmarks in the [dataset](https://github.com/Xinglab/PEGASAS/tree/master/PathwayActivity/dataset) from the Github repo. 
  
  #### Step 2: Pathway activity-correlated events
  
