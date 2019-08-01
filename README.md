@@ -1,7 +1,7 @@
 # PEGASAS
 #### Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 
-### Ouick guide
+### Quick guide
 1. [Download](#downdload-the-pegasas-and-example-datasets)
 2. [Dependencies](#Dependencies)
 3. [Usage](#performing-pegasas-analysis)
@@ -50,7 +50,7 @@ optional arguments:
                         time.
   --plotting            Making plots to inspect K-S enrichment scores.
   ```
- You can find the [eaxample](https://github.com/Xinglab/PEGASAS/tree/master/example) file for Group Info and 50 Hallmarks in the [dataset](https://github.com/Xinglab/PEGASAS/tree/master/PathwayActivity/dataset) from the Github repo. 
+ You can find the [example](https://github.com/Xinglab/PEGASAS/tree/master/example) file for Group Info and 50 Hallmarks in the [dataset](https://github.com/Xinglab/PEGASAS/tree/master/PathwayActivity/dataset) from the Github repo. 
  
  #### Step 2: Pathway activity-correlated events
  
