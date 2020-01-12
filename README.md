@@ -21,7 +21,7 @@ Note that the installation process will only automatically check and install pyt
 ### Dependencies 
 python version 2.7 (numpy, scipy, matplotlib)
 
-R version 3.4.0 (LSD, ggplot2)
+R version 3.4.0 (LSD, data.table, ggplot2)
 
 ### Performing PEGASAS analysis
 After installed PEGASAS and its dependencies, following the below two steps to perform the analysis and generate plots for correlation and Gene Ontology analysis.  ([A toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) is provided for a test run and correponding commands are provided in the [next section](#example-pegasas-run).)
@@ -143,4 +143,4 @@ Yi Xing <XINGYI@email.chop.edu>
 
 ### Citation
 
-Phillips J.W.*, Pan Y.*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ (2020) Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers. Proc. Natl. Acad. Sci. U.S.A., In Press (+ joint corresponding authors; * joint first authors)
+Phillips J.W.\*, Pan Y.\*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ (2020) Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers. Proc. Natl. Acad. Sci. U.S.A., In Press (+ joint corresponding authors; \* joint first authors)
