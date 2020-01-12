@@ -2,21 +2,22 @@
 #### Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
 
 ### Quick guide
-1. [Installation](#downdload-the-pegasas-and-example-datasets)
-2. [Dependencies](#Dependencies)
+1. [Installation](#installation)
+2. [Dependencies](#dependencies)
 3. [Usage](#performing-pegasas-analysis)
-4. [Example](#example-command)
+4. [Example](#example-pegasas-run)
 4. [Contact](#contact)
 5. [Publication](#citation)
 
-### Downloading the PEGASAS and example datasets
+### Installation
 The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/PEGASAS/data) can be downloaded and installed as shown below:
-```bash
+```
 git clone git@github.com:Xinglab/PEGASAS.git
 cd PEGASAS
 python setup.py install
 ```
 Note that
+
 ### Dependencies 
 python version 2.7 (numpy, scipy, matplotlib)
 
@@ -45,11 +46,8 @@ optional arguments:
 
 For command line options of each sub-command, type: PEGASAS COMMAND -h
 ```
-
-#### Step 1: Pathway activity calculation
-
+##### Step 1: Pathway activity calculation
 PEGASAS can calculate signaling pathway activity based pre-defined gene signatures and gene expression. Details see below:
-
 ```
 PEGASAS pathway -h
 usage: PEGASAS pathway [-h] [-o OUT_DIR] [-n NUM_INTERVAL] [--plotting]
@@ -73,13 +71,11 @@ optional arguments:
                         time.
   --plotting            Making plots to inspect K-S enrichment scores.
   ```
- 
- 
- #### Step 2: Pathway activity-correlated events
- 
+  
+ ##### Step 2: Pathway activity-correlated events
 PEGASAS can perform correlation analysis to identify pathway-associated events by taking pathway acitivity measurements generated in Step 1 and alternative splicing(or editing, etc) events. Details see below:
  ```
- PEGASAS correlation -h
+PEGASAS correlation -h
 usage: PEGASAS correlation [-h] [-o OUT_DIR] [--GO] [--GO-only]
                            [-b GO_BACKGROUND_GENE_LIST]
                            signatureScorebySample PSIbySample groupNameOrder
@@ -110,8 +106,8 @@ optional arguments:
 
 ```
 
-### Example command
-Here are commands for a test run by using [toy example files](https://github.com/Xinglab/PEGASAS/tree/master/example) provided in the example folder in the package.\
+### Example PEGASAS run
+Here are commands for a test run using [toy example files](https://github.com/Xinglab/PEGASAS/tree/master/example) provided in the example folder in the package.\
 Go to PEGASAS folder:
 ```
 cd PEGASAS
@@ -146,5 +142,5 @@ Yang Pan <panyang@ucla.edu>\
 Yi Xing <XINGYI@email.chop.edu>
 
 ### Citation
-Manuscript in press. \
-Phillips J.W.*, Pan Y.*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ (2020) Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers. Proc. Natl. Acad. Sci. U.S.A., In Press (+ joint corresponding authors; * joint first authors)\
+
+Phillips J.W.*, Pan Y.*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ (2020) Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers. Proc. Natl. Acad. Sci. U.S.A., In Press (+ joint corresponding authors; * joint first authors)
