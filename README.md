@@ -16,7 +16,7 @@ git clone git@github.com:Xinglab/PEGASAS.git
 cd PEGASAS
 python setup.py install
 ```
-Note that
+Note that the installation process will only automatically check and install python package dependencies. R packages required for PEGASAS have to be installed manually if missing. See [next section](#dependencies) for required packages.
 
 ### Dependencies 
 python version 2.7 (numpy, scipy, matplotlib)
