@@ -10,7 +10,7 @@
 5. [Publication](#citation)
 
 ### Installation
-The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data) can be downloaded and installed as shown below:
+The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data)) can be downloaded and installed as shown below:
 ```
 git clone git@github.com:Xinglab/PEGASAS.git
 cd PEGASAS
@@ -143,4 +143,4 @@ Yi Xing <XINGYI@email.chop.edu>
 
 ### Citation
 
-Phillips J.W.\*, Pan Y.\*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ (2020) Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers. Proc. Natl. Acad. Sci. U.S.A., In Press (+ joint corresponding authors; \* joint first authors)
+Phillips J.W.\*, Pan Y.\*, Tsai B.L., Xie Z., Demirdjian L., Xiao W., Yang H.T., Zhang Y., Lin C.H., Cheng D., Hu Q., Liu S., Black D.L., Witte O.N.+, Xing Y.+ __Pathway-guided analysis reveals Myc-dependent alternative pre-mRNA splicing in aggressive prostate cancers.__ Proc. Natl. Acad. Sci. U.S.A., (2020) In Press (+ joint corresponding authors; \* joint first authors)
