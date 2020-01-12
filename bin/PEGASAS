@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+import os
+import sys
+import logging
+import argparse as ap
+import datetime
+from PEGASAS import config
+
+__author__ = 'Yang Pan'
+__version__ = config.CURRENT_VERSION
+__email__ = 'panyang@ucla.edu'
+
+
+def main():
+	argparser = get_arg_parser()
+	args = argparser.parse_args()
+	
+	subcommand = args.subcommand
+	
+	if subcommand == 'pathway':
+		from PEGASAS import PEGASAS_pathway
+		PEGASAS_pathway.main(args)
+		
+	elif subcommand == 'correlation':
+		from PEGASAS import PEGASAS_correlation
+		PEGASAS_correlation.main(args)
+	
+
+def get_arg_parser():
+	"""DOCSTRING
+	Args
+	Returns
+	"""
+	description = "%(prog)s -- PEGASAS"
+	epilog = "For command line options of each sub-command, type: %(prog)s COMMAND -h"
+	
+	argparser = ap.ArgumentParser(description=description, epilog=epilog)
+	argparser.add_argument("--version", action="version", version="%(prog)s "+__version__)
+	
+	subparsers = argparser.add_subparsers( dest="subcommand" )
+
+	add_pathway_parser(subparsers)
+	add_correlation_parser(subparsers)
+
+	return argparser
+
+
+def add_pathway_parser( subparsers ):
+	arg_formatting = subparsers.add_parser("pathway", help='Calculates signaling pathway activaty derived from geneset enrichment metric based on RNA-Seq gene expression')
+	optional_args = arg_formatting._action_groups.pop()
+	required_args = arg_formatting.add_argument_group('required arguments')
+	required_args.add_argument('geneExpbySample',help='A TSV format matrix of gene expression values (FPKM, TPM, etc.) where each column is one sample and each row is one gene.')
+	required_args.add_argument('geneSignatureList',default=config.HALLMARKS50,help='One or multiple gene signature sets of pathway of interest in the format of \'gmt\' (see MSigDB webset).')
+	required_args.add_argument('groupInfo',help='A TSV format file provides patient ID and phenotype/disease stage in each row.')
+	optional_args.add_argument('-o','--out-dir', default='PEGASAS_PathwayScore', help='Output folder name of the analysis.')
+	optional_args.add_argument('-n','--num-interval',default=40, help='Number of KS enrichment calculation processes one time.')
+	optional_args.add_argument('--plotting',default=False, action='store_true', help='Making plots to inspect K-S enrichment scores.')
+	arg_formatting._action_groups.append(optional_args)
+	return 
+
+def add_correlation_parser( subparsers ):
+	arg_screening = subparsers.add_parser("correlation", help="Computes pathway correlated alternative splicing events")
+	optional_args = arg_screening._action_groups.pop()
+	required_args=arg_screening.add_argument_group('required arguments')
+	required_args.add_argument('signatureScorebySample',help='A TSV format list of gene signature score where each column is one sample and the corresponding score.')
+	required_args.add_argument('PSIbySample',help='A TSV format matrix of PSI values where each column is one sample and each row is one splicing event')
+	required_args.add_argument('groupNameOrder',help='A file contains a comma-separated string of group name orders. The group name should match group info list in the pathway score calculation step. This is useful for the heatmap visualization.')
+	optional_args.add_argument('-o','--out-dir', default='PEGASAS_PathwayScore', help='Output folder name of the analysis.')
+	optional_args.add_argument('--GO',default=False, action='store_true', help='Perform GO analysis.')
+	optional_args.add_argument('--GO-only',default=False, action='store_true', help='Only perform GO analysis. Needs to provide background gene list for p-value calculation.')
+	optional_args.add_argument('-b','--GO-background-gene-list', help='Provides background gene list for GO analysis bias correction. This background list should contain genes involved in the splicing analysis. Required under GO-only mode.')
+	arg_screening._action_groups.append(optional_args)
+	return 
+
+if __name__ == '__main__':
+	try:
+		main()
+	except KeyboardInterrupt:
+		sys.stderr.write("[INFO] User interrupted; program terminated.")
+		sys.exit(0)
