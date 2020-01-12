@@ -10,7 +10,7 @@
 5. [Publication](#citation)
 
 ### Installation
-The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/PEGASAS/data) can be downloaded and installed as shown below:
+The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data) can be downloaded and installed as shown below:
 ```
 git clone git@github.com:Xinglab/PEGASAS.git
 cd PEGASAS
@@ -24,7 +24,7 @@ python version 2.7 (numpy, scipy, matplotlib)
 R version 3.4.0 (LSD, ggplot2)
 
 ### Performing PEGASAS analysis
-After installed PEGASAS and its dependencies, following the below two steps to perform the analysis and generate plots for correlation and Gene Ontology analysis.  ([A toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) is provided for a test run and correponding commands are provided in the [next section](#example-command).)
+After installed PEGASAS and its dependencies, following the below two steps to perform the analysis and generate plots for correlation and Gene Ontology analysis.  ([A toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) is provided for a test run and correponding commands are provided in the [next section](#example-pegasas-run).)
 
 There are two steps to perform PEGASAS analysis, as shown below (typing PEGASAS -h in the command line):
 ```
