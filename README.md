@@ -12,7 +12,7 @@
 ### Installation
 The PEGASAS package (including [a toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) and [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data)) can be downloaded and installed as shown below:
 ```
-git clone git@github.com:Xinglab/PEGASAS.git
+git clone https://github.com/Xinglab/PEGASAS.git
 cd PEGASAS
 python setup.py install
 ```
