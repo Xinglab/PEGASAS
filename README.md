@@ -56,8 +56,8 @@ usage: PEGASAS pathway [-h] [-o OUT_DIR] [-n NUM_INTERVAL] [--plotting]
 
 required arguments:
   geneExpbySample       TSV format matrix of gene expression values (FPKM,
-                        TPM, etc.), where each column is one sample and each
-                        row is one gene
+                        TPM, etc.), where each row is one sample and each
+                        column is one gene
   geneSignatureList     One or multiple gene signature sets from pathway of
                         interest, in the 'gmt' format (see MSigDB webset)
   groupInfo             TSV format file, providing patient ID and
