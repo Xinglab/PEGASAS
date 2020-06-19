@@ -44,16 +44,16 @@ def main(args):
 	if GO_analysis_only:
 		bg_list=args.GO_background_gene_list
 
-	sample_order=''
-	for l in open(sample_order_fin):
-		sample_order=l.strip()
-		break
+	# sample_order=''
+	# for l in open(sample_order_fin):
+	# 	sample_order=l.strip()
+	# 	break
 	outdir=args.out_dir
 
 	print '###Correlation analysis'
 	if GO_analysis_only==False:	
 		#STEP1: SORTING (matching sample, ordering sample for heatmap) #TODO, simple version- just matching sample
-		cmd1='python '+config.MAT_REORDER+' '+fin_signature+' '+outdir+' '+sample_order
+		cmd1='python '+config.MAT_REORDER+' '+fin_signature+' '+outdir+' '+sample_order_fin
 		print cmd1
 		os.system(cmd1)
 

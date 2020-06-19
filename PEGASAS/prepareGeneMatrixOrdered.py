@@ -30,7 +30,7 @@ def loadfromExpMatrix(fin,Gene_list):
 def loadOrder(fin):
 	order=[]
 	for l in open(fin):
-		ls=l.strip().split('\t')
+		order=l.strip().split(',')
 		break
 	return order
 
@@ -54,7 +54,9 @@ def main():
 	fout=open(outdir+'/'+folder_prefix+'/'+fout_name,'w')
 	header_line='SampleID'
 	value_line=sys.argv[1].split('/')[-1].split('.')[0]
-	order=sys.argv[3].split(',')
+	sample_order_fin=sys.argv[3]
+	order=loadOrder(sample_order_fin)
+	print order
 	#order=['Benign-GTEx','Benign-TCGA','Primary-TCGA','CRPC-SU2C','CRPC-Robinson','CRPC-Beltran','NE-SU2C','NE-Beltran']
 	if len(order)==0:
 		exit('needs to input the sample order for matrix')
