@@ -76,8 +76,9 @@ def main(args):
 
 		
 	if GO_analysis or GO_analysis_only:
+		db_versions=args.GOdb_versions
 		os.system('mkdir -p '+outdir+'/'+signature_name+'/GO')
-		cmd4 = 'Rscript '+config.GO_PLOT+' '+config.GO_PLOT_LIB+' '+bg_list+' '+outdir+'/'+signature_name+'/'+signature_name+'_sig_list.txt'+' '+outdir+'/'+signature_name+'/GO'+' '+signature_name
+		cmd4 = 'Rscript '+config.GO_PLOT+' '+config.GO_PLOT_LIB+' '+bg_list+' '+outdir+'/'+signature_name+'/'+signature_name+'_sig_list.txt'+' '+outdir+'/'+signature_name+'/GO'+' '+signature_name+' '+db_versions
 		print cmd4
 		os.system(cmd4)
 	if GO_analysis==False and GO_analysis_only==False:

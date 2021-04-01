@@ -40,17 +40,17 @@ generate_go_plot_dev <- function(GO_result, cutoff = 0.05, aspect_ratio = 1.8, b
   
 }
 
-get_enrichr_GO <- function(all_gene_list, significant_genes){
+get_enrichr_GO <- function(all_gene_list, significant_genes, GO_BP_db, GO_CC_db, GO_MF_db){
   GO_processes = c("BP", "CC", "MF")
   merged_GO_result <- list()
   for (process in GO_processes){
-    recalculated_GO_result = recalculate_GO(all_gene_list, significant_genes, process)
+    recalculated_GO_result = recalculate_GO(GO_BP_db, GO_CC_db, GO_MF_db, all_gene_list, significant_genes, process)
     merged_GO_result <- rbind(recalculated_GO_result, merged_GO_result)
   }
   merged_GO_result
 }
 
-recalculate_GO <- function(all_gene_list, significant_genes, GO_process = "BP") {
+recalculate_GO <- function(GO_BP_db, GO_CC_db, GO_MF_db, all_gene_list, significant_genes, GO_process = "BP") {
   library(enrichR)
   if (GO_process == "BP") {
     go_db = "GO_Biological_Process_2017b"

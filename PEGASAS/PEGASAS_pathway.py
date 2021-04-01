@@ -70,6 +70,7 @@ def KS_test(l_hits, l_null, l_w, plotting, sample_name): #lists are ranks based 
 def SampleEnrichment(gene_exp,gene_set,sample_name, group, outdir): 
 	make_plot=False
 	fout=open(outdir+'/'+sample_name+'.txt','w')
+	#fout.write('{}\t{}\t{}\t{}\t{}\n'.format('sample_name','group_name','enrichment_score','ks_2samp_pvalue','median_hits'))
 	if make_plot:
 		os.system('mkdir -p '+outdir+'/fig/')
 	l_hits=[]
@@ -120,7 +121,7 @@ def main(args):
 				batch_list_s=[]
 		#handle last batch
 		if batch_list!=[]:
-			print 'exist last batch',len(batch_list)
+			#print 'exist last batch',len(batch_list)
 			KS_ES_list=[]
 			for n in xrange(0,len(batch_list)):
 				KS_ES_list.append(mp.Process(target=SampleEnrichment,args=(batch_list[n], geneSet[gs],batch_list_s[n],groupMap[batch_list_s[n]], score_outdir)))
@@ -129,8 +130,9 @@ def main(args):
 				KS_ES_list[n].join()
 			batch_list=[]
 			batch_list_s=[]
+		config.update_progress(tot/(0.0+tot))
 		print score_outdir, 'done'
-
+		
 		os.system('cat '+score_outdir.rstrip('/')+'/*.txt >'+score_outdir.rstrip('/').split('.pathway')[0]+'.scores.txt')
 		#os.system('rm -r '++score_outdir.rstrip('/'))
 		print 'merged'

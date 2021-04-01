@@ -71,6 +71,7 @@ def add_correlation_parser( subparsers ):
 	optional_args.add_argument('--GO',default=False, action='store_true', help='Perform GO analysis.')
 	optional_args.add_argument('--GO-only',default=False, action='store_true', help='Only perform GO analysis. Needs to provide background gene list for p-value calculation.')
 	optional_args.add_argument('-b','--GO-background-gene-list', help='Provides background gene list for GO analysis bias correction. This background list should contain genes involved in the splicing analysis. Required under GO-only mode.')
+	optional_args.add_argument('--GOdb-versions',default='GO_Biological_Process_2017b,GO_Cellular_Component_2015,GO_Molecular_Function_2017b', help= 'Specify EnrichR GO db versions. Default is the 2017 version used in our PNAS paper PMID: 32086391')
 	arg_screening._action_groups.append(optional_args)
 	return 
 

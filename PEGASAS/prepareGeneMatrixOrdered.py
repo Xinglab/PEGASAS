@@ -21,7 +21,7 @@ def loadfromExpMatrix(fin,Gene_list):
 		l_dict=dict(zip(header,ls[1:]))
 		if ls[0].split('.')[0] in Gene_list:
 			if ls[0].split('.')[0] in EXP:
-				print 'err ', ls[0]
+				print '! Error in ', ls[0]
 			EXP[ls[0].split('.')[0]]={}
 			for sample in l_dict.keys():
 				EXP[ls[0].split('.')[0]][sample]=float(l_dict[sample])
@@ -56,7 +56,7 @@ def main():
 	value_line=sys.argv[1].split('/')[-1].split('.')[0]
 	sample_order_fin=sys.argv[3]
 	order=loadOrder(sample_order_fin)
-	print order
+	#print order
 	#order=['Benign-GTEx','Benign-TCGA','Primary-TCGA','CRPC-SU2C','CRPC-Robinson','CRPC-Beltran','NE-SU2C','NE-Beltran']
 	if len(order)==0:
 		exit('needs to input the sample order for matrix')

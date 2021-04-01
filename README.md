@@ -71,7 +71,9 @@ optional arguments:
                         Number of parallel processes for KS enrichment calculation
   --plotting            Makes plots to inspect K-S enrichment scores
   ```
-  
+Note:
+About input geneSignatureList format: PEGASAS can take multipel gene signatures in one file, which requries a minor modification of gmt (full name of the signature after '>' is removed). See example file under ([data]https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data) folder for details.\
+
  ##### Step 2: Pathway activity-correlated events
 PEGASAS can perform correlation analysis to identify pathway-associated events from the pathway acitivity measurements generated in Step 1 and alternative splicing(or editing, etc.) events. For details of this step, see below:
  ```
@@ -105,7 +107,8 @@ optional arguments:
                         only mode
 
 ```
-
+Note:
+About the input PSIbySample TSV format: first 8 columns are used to define splicing events using gene name, AC, chrome, strand, and key coordinates following rMATS output format. See ([toy example]https://github.com/Xinglab/PEGASAS/tree/master/example) for a concrete example.\ 
 ### Example PEGASAS run
 Here are commands for a test run using [toy example files](https://github.com/Xinglab/PEGASAS/tree/master/example) provided in the example folder in the package.\
 Go to PEGASAS folder:

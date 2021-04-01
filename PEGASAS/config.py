@@ -10,7 +10,7 @@ import os, sys
 #import yaml
 
 
-CURRENT_VERSION = "v1.1.0"
+CURRENT_VERSION = "v1.1.11111111111"
 
 
 def update_progress(progress):
