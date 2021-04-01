@@ -72,7 +72,7 @@ optional arguments:
   --plotting            Makes plots to inspect K-S enrichment scores
   ```
 Note:
-About input geneSignatureList format: PEGASAS can take multipel gene signatures in one file, which requries a minor modification of gmt (full name of the signature after '>' is removed). See example file under ([data]https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data) folder for details.\
+About input geneSignatureList format: PEGASAS can take multipel gene signatures in one file, which requries a minor modification of gmt (full name of the signature after '>' is removed). See example file under [data](https://github.com/Xinglab/PEGASAS/tree/master/PEGASAS/data) folder for details.
 
  ##### Step 2: Pathway activity-correlated events
 PEGASAS can perform correlation analysis to identify pathway-associated events from the pathway acitivity measurements generated in Step 1 and alternative splicing(or editing, etc.) events. For details of this step, see below:
@@ -80,35 +80,40 @@ PEGASAS can perform correlation analysis to identify pathway-associated events f
 PEGASAS correlation -h
 usage: PEGASAS correlation [-h] [-o OUT_DIR] [--GO] [--GO-only]
                            [-b GO_BACKGROUND_GENE_LIST]
+                           [--GOdb-versions GODB_VERSIONS]
                            signatureScorebySample PSIbySample groupNameOrder
 
 required arguments:
   signatureScorebySample
-                        TSV format list of gene signature scores, where each
-                        column is one sample and the corresponding score
-  PSIbySample           TSV format matrix of PSI values where each column is
-                        one sample and each row is one splicing event
-  groupNameOrder        File containing a comma-separated string of group name
+                        A TSV format list of gene signature score where each
+                        column is one sample and the corresponding score.
+  PSIbySample           A TSV format matrix of PSI values where each column is
+                        one sample and each row is one splicing event.
+  groupNameOrder        A file contains a comma-separated string of group name
                         orders. The group name should match group info list in
                         the pathway score calculation step. This is useful for
-                        the heatmap visualization
+                        the heatmap visualization.
 
 optional arguments:
   -h, --help            show this help message and exit
   -o OUT_DIR, --out-dir OUT_DIR
-                        Name of folder for analysis output
-  --GO                  Performs GO analysis
-  --GO-only             Only performs GO analysis. Requires to provide background
-                        gene list for p-value calculation (see -b GO_BACKGROUND_GENE_LIST)
+                        Output folder name of the analysis.
+  --GO                  Perform GO analysis.
+  --GO-only             Only perform GO analysis. Needs to provide background
+                        gene list for p-value calculation.
   -b GO_BACKGROUND_GENE_LIST, --GO-background-gene-list GO_BACKGROUND_GENE_LIST
                         Provides background gene list for GO analysis bias
-                        correction and should contain genes
-                        participated in the splicing analysis. Required for GO-
-                        only mode
+                        correction. This background list should contain genes
+                        involved in the splicing analysis. Required under GO-
+                        only mode.
+  --GOdb-versions GODB_VERSIONS
+                        Specify EnrichR GO db versions. Default is the 2017
+                        version used in our PNAS paper PMID: 32086391
+
 
 ```
 Note:
-About the input PSIbySample TSV format: first 8 columns are used to define splicing events using gene name, AC, chrome, strand, and key coordinates following rMATS output format. See ([toy example]https://github.com/Xinglab/PEGASAS/tree/master/example) for a concrete example.\ 
+About the input PSIbySample TSV format: first 8 columns are used to define splicing events using gene name, AC, chrome, strand, and key coordinates following rMATS output format. See [toy example](https://github.com/Xinglab/PEGASAS/tree/master/example) for a concrete example.
 ### Example PEGASAS run
 Here are commands for a test run using [toy example files](https://github.com/Xinglab/PEGASAS/tree/master/example) provided in the example folder in the package.\
 Go to PEGASAS folder:
