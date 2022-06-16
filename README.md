@@ -1,6 +1,6 @@
 # PEGASAS
 #### Pathway Enrichment-Guided Activity Study of Alternative Splicing (PEGASAS)
-__Web server:__ We have a web server now! It supports light-weight analysis and various interactive visualizations (scatter plot, hive plot, etc.), [check it out by clicking here!](http://xingshiny.research.chop.edu:3838/PEGASASServer/) 
+__Web server:__ We have a web server now! It supports light-weight analysis and various interactive visualizations (scatter plot, hive plot, etc.), [check it out by clicking here!](https://xingshiny.research.chop.edu/PEGASASServer/) 
 
 ### Quick guide
 1. [Installation](#installation)
